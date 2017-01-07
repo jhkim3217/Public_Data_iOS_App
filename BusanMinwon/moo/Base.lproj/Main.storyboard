@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KMC-lj-xQu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--부산 무인민원발급기 지도-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="moo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EP1-zQ-j6y">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <stepper opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eXr-gz-zBz">
+                                <rect key="frame" x="265" y="610" width="94" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="ILY-a9-GgU"/>
+                                    <constraint firstAttribute="height" constant="29" id="h3f-dz-Mmc"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ca6-iQ-wpZ"/>
+                                </connections>
+                            </stepper>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPK-8E-2qf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mIc-Rn-7aL">
+                                        <rect key="frame" x="169" y="146" width="37" height="37"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="37" id="p5S-KN-VVe"/>
+                                            <constraint firstAttribute="height" constant="37" id="vZk-hx-IKf"/>
+                                        </constraints>
+                                        <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인터넷으로 부터 데이터를 수신 중입니다.   " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Ah-Pu-FKW">
+                                        <rect key="frame" x="80" y="222" width="215" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2Ah-Pu-FKW" secondAttribute="trailing" constant="80" id="5KU-eP-8s3"/>
+                                    <constraint firstItem="2Ah-Pu-FKW" firstAttribute="top" secondItem="mIc-Rn-7aL" secondAttribute="bottom" constant="39" id="Hv6-78-I90"/>
+                                    <constraint firstItem="mIc-Rn-7aL" firstAttribute="centerX" secondItem="SPK-8E-2qf" secondAttribute="centerX" id="Mop-dI-NDg"/>
+                                    <constraint firstItem="2Ah-Pu-FKW" firstAttribute="leading" secondItem="SPK-8E-2qf" secondAttribute="leading" constant="80" id="b82-WT-gGi"/>
+                                    <constraint firstItem="mIc-Rn-7aL" firstAttribute="top" secondItem="SPK-8E-2qf" secondAttribute="top" constant="146" id="bn1-2k-XVc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EP1-zQ-j6y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BF4-ZK-H2x"/>
+                            <constraint firstItem="eXr-gz-zBz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="D23-w0-cKl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SPK-8E-2qf" secondAttribute="bottom" id="M7u-5E-pTM"/>
+                            <constraint firstItem="SPK-8E-2qf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ng3-Xa-RB0"/>
+                            <constraint firstItem="EP1-zQ-j6y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VET-f4-1h3"/>
+                            <constraint firstItem="EP1-zQ-j6y" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Vwo-eP-pu2"/>
+                            <constraint firstAttribute="trailing" secondItem="SPK-8E-2qf" secondAttribute="trailing" id="cru-Eg-g2T"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eXr-gz-zBz" secondAttribute="bottom" constant="28" id="ipx-qn-5lQ"/>
+                            <constraint firstItem="EP1-zQ-j6y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m31-t6-2Bs"/>
+                            <constraint firstItem="SPK-8E-2qf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x5b-7w-vwr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="부산 무인민원발급기 지도" id="JAh-aB-vz1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myIndicatorView" destination="SPK-8E-2qf" id="Vmo-db-drn"/>
+                        <outlet property="myMapView" destination="EP1-zQ-j6y" id="Hp2-le-NYQ"/>
+                        <outlet property="stepper" destination="eXr-gz-zBz" id="Qxg-uy-szm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149.5" y="229.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4sP-5d-FWB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KMC-lj-xQu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l2y-yg-In7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZRv-RC-VYF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLo-vP-RT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="-368"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="e4I-9X-h5A">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--주소를 찾아줘-->
+        <scene sceneID="4aj-OW-F2p">
+            <objects>
+                <viewController id="5Id-gk-VhD" customClass="main_page" customModule="trans_addr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ohc-kc-dEz"/>
+                        <viewControllerLayoutGuide type="bottom" id="UoS-D0-gz1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BAp-Uj-Cgq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VSa-jJ-oZm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Bhw-sf-MGI"/>
+                                    <constraint firstAttribute="height" constant="667" id="l7e-f4-Drc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="5Id-gk-VhD" id="K49-t3-l4g"/>
+                                    <outlet property="delegate" destination="5Id-gk-VhD" id="LmD-4C-vYE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VSa-jJ-oZm" firstAttribute="top" secondItem="BAp-Uj-Cgq" secondAttribute="top" id="YIH-LI-B1H"/>
+                            <constraint firstItem="UoS-D0-gz1" firstAttribute="top" secondItem="VSa-jJ-oZm" secondAttribute="bottom" id="dQk-qQ-OMB"/>
+                            <constraint firstItem="VSa-jJ-oZm" firstAttribute="leading" secondItem="BAp-Uj-Cgq" secondAttribute="leading" id="efq-yk-mTG"/>
+                            <constraint firstAttribute="trailing" secondItem="VSa-jJ-oZm" secondAttribute="trailing" id="wRo-PT-myi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="주소를 찾아줘" id="489-xj-QGd">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Mac-OT-GmH"/>
+                        <barButtonItem key="leftBarButtonItem" image="mailbox (1).png" id="pNb-tU-RAI">
+                            <connections>
+                                <action selector="postSearchPressed:" destination="5Id-gk-VhD" id="wzl-Ss-5qn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="addrTable" destination="VSa-jJ-oZm" id="ulK-FC-yfb"/>
+                        <outlet property="navbar" destination="489-xj-QGd" id="wMF-f6-EKb"/>
+                        <segue destination="SbB-r3-BSH" kind="push" identifier="selecttable" id="r2X-bS-rq2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJw-F7-Rna" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785.5" y="377.5"/>
+        </scene>
+        <!--MapviewC-->
+        <scene sceneID="um3-qa-s2S">
+            <objects>
+                <viewController id="SbB-r3-BSH" customClass="mapviewC" customModule="trans_addr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zHR-3c-ulJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8xN-lH-AOM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gF7-ob-yUN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="v9w-kh-uzi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="bKL-Ub-O1N"/>
+                                    <constraint firstAttribute="height" constant="603" id="ehF-Ut-Tcg"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v9w-kh-uzi" firstAttribute="top" secondItem="zHR-3c-ulJ" secondAttribute="bottom" id="Jdz-ag-jTU"/>
+                            <constraint firstItem="8xN-lH-AOM" firstAttribute="top" secondItem="v9w-kh-uzi" secondAttribute="bottom" id="Z0l-iI-191"/>
+                            <constraint firstItem="v9w-kh-uzi" firstAttribute="leading" secondItem="gF7-ob-yUN" secondAttribute="leading" id="ZDR-2W-Oyr"/>
+                            <constraint firstAttribute="trailing" secondItem="v9w-kh-uzi" secondAttribute="trailing" id="j2k-nt-dOn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fc7-nT-vGv"/>
+                    <connections>
+                        <outlet property="myMapView" destination="v9w-kh-uzi" id="Uou-AN-UGS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UpX-DR-2jT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2309.5" y="377.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IpS-Oc-0Hk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e4I-9X-h5A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="OOO-jf-HXr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rVP-Az-USI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.71516649730000004" green="1" blue="0.972980391" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5Id-gk-VhD" kind="relationship" relationship="rootViewController" id="eAe-T4-FY9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vru-vb-9Dd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187.5" y="377.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mailbox (1).png" width="32" height="32"/>
+    </resources>
+</document>

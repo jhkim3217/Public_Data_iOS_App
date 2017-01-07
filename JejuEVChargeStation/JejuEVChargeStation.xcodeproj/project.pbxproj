@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		732BF7E41DEBAB6900F5842F /* UICopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732BF7E31DEBAB6900F5842F /* UICopyableLabel.swift */; };
+		732FBF561DE2B1F100158507 /* NumericOperatorOverloadingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732FBF551DE2B1F100158507 /* NumericOperatorOverloadingExtensions.swift */; };
+		73A3CF311DE25CD100AD784F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A3CF301DE25CD100AD784F /* TableViewController.swift */; };
+		73BC5E891DDC521C00E8AEC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC5E881DDC521C00E8AEC2 /* AppDelegate.swift */; };
+		73BC5E8B1DDC521C00E8AEC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC5E8A1DDC521C00E8AEC2 /* ViewController.swift */; };
+		73BC5E8E1DDC521C00E8AEC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73BC5E8C1DDC521C00E8AEC2 /* Main.storyboard */; };
+		73BC5E901DDC521C00E8AEC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73BC5E8F1DDC521C00E8AEC2 /* Assets.xcassets */; };
+		73BC5E931DDC521C00E8AEC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73BC5E911DDC521C00E8AEC2 /* LaunchScreen.storyboard */; };
+		73BC5E9C1DDC52AA00E8AEC2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BC5E9B1DDC52AA00E8AEC2 /* MapKit.framework */; };
+		73D5B7281DDD1FAB008B0327 /* StationPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D5B7271DDD1FAB008B0327 /* StationPoint.swift */; };
+		73D5B72A1DDD21B8008B0327 /* jejutest.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 73D5B7291DDD21B8008B0327 /* jejutest.gpx */; };
+		73E8CD841DE473D800DEBCFE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E8CD831DE473D800DEBCFE /* DetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		732BF7E31DEBAB6900F5842F /* UICopyableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICopyableLabel.swift; sourceTree = "<group>"; };
+		732FBF551DE2B1F100158507 /* NumericOperatorOverloadingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericOperatorOverloadingExtensions.swift; sourceTree = "<group>"; };
+		73A3CF301DE25CD100AD784F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		73BC5E851DDC521C00E8AEC2 /* JejuEVChargeStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JejuEVChargeStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73BC5E881DDC521C00E8AEC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		73BC5E8A1DDC521C00E8AEC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		73BC5E8D1DDC521C00E8AEC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		73BC5E8F1DDC521C00E8AEC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73BC5E921DDC521C00E8AEC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		73BC5E941DDC521C00E8AEC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73BC5E9B1DDC52AA00E8AEC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		73D5B7271DDD1FAB008B0327 /* StationPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationPoint.swift; sourceTree = "<group>"; };
+		73D5B7291DDD21B8008B0327 /* jejutest.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = jejutest.gpx; sourceTree = "<group>"; };
+		73E8CD831DE473D800DEBCFE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73BC5E821DDC521C00E8AEC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73BC5E9C1DDC52AA00E8AEC2 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73BC5E7C1DDC521C00E8AEC2 = {
+			isa = PBXGroup;
+			children = (
+				73D5B7291DDD21B8008B0327 /* jejutest.gpx */,
+				73BC5E871DDC521C00E8AEC2 /* JejuEVChargeStation */,
+				73BC5E861DDC521C00E8AEC2 /* Products */,
+				73BC5E9A1DDC52AA00E8AEC2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		73BC5E861DDC521C00E8AEC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73BC5E851DDC521C00E8AEC2 /* JejuEVChargeStation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73BC5E871DDC521C00E8AEC2 /* JejuEVChargeStation */ = {
+			isa = PBXGroup;
+			children = (
+				73E8CD831DE473D800DEBCFE /* DetailViewController.swift */,
+				73BC5E881DDC521C00E8AEC2 /* AppDelegate.swift */,
+				73BC5E8A1DDC521C00E8AEC2 /* ViewController.swift */,
+				73BC5E8C1DDC521C00E8AEC2 /* Main.storyboard */,
+				73BC5E8F1DDC521C00E8AEC2 /* Assets.xcassets */,
+				73BC5E911DDC521C00E8AEC2 /* LaunchScreen.storyboard */,
+				73BC5E941DDC521C00E8AEC2 /* Info.plist */,
+				73D5B7271DDD1FAB008B0327 /* StationPoint.swift */,
+				73A3CF301DE25CD100AD784F /* TableViewController.swift */,
+				732FBF551DE2B1F100158507 /* NumericOperatorOverloadingExtensions.swift */,
+				732BF7E31DEBAB6900F5842F /* UICopyableLabel.swift */,
+			);
+			path = JejuEVChargeStation;
+			sourceTree = "<group>";
+		};
+		73BC5E9A1DDC52AA00E8AEC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73BC5E9B1DDC52AA00E8AEC2 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73BC5E841DDC521C00E8AEC2 /* JejuEVChargeStation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73BC5E971DDC521C00E8AEC2 /* Build configuration list for PBXNativeTarget "JejuEVChargeStation" */;
+			buildPhases = (
+				73BC5E811DDC521C00E8AEC2 /* Sources */,
+				73BC5E821DDC521C00E8AEC2 /* Frameworks */,
+				73BC5E831DDC521C00E8AEC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JejuEVChargeStation;
+			productName = JejuEVChargeStation;
+			productReference = 73BC5E851DDC521C00E8AEC2 /* JejuEVChargeStation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73BC5E7D1DDC521C00E8AEC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Tae-Jong Yu";
+				TargetAttributes = {
+					73BC5E841DDC521C00E8AEC2 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = UQ37D35Z4Z;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 73BC5E801DDC521C00E8AEC2 /* Build configuration list for PBXProject "JejuEVChargeStation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 73BC5E7C1DDC521C00E8AEC2;
+			productRefGroup = 73BC5E861DDC521C00E8AEC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73BC5E841DDC521C00E8AEC2 /* JejuEVChargeStation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73BC5E831DDC521C00E8AEC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73BC5E931DDC521C00E8AEC2 /* LaunchScreen.storyboard in Resources */,
+				73BC5E901DDC521C00E8AEC2 /* Assets.xcassets in Resources */,
+				73BC5E8E1DDC521C00E8AEC2 /* Main.storyboard in Resources */,
+				73D5B72A1DDD21B8008B0327 /* jejutest.gpx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73BC5E811DDC521C00E8AEC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73BC5E8B1DDC521C00E8AEC2 /* ViewController.swift in Sources */,
+				73D5B7281DDD1FAB008B0327 /* StationPoint.swift in Sources */,
+				73BC5E891DDC521C00E8AEC2 /* AppDelegate.swift in Sources */,
+				73E8CD841DE473D800DEBCFE /* DetailViewController.swift in Sources */,
+				73A3CF311DE25CD100AD784F /* TableViewController.swift in Sources */,
+				732FBF561DE2B1F100158507 /* NumericOperatorOverloadingExtensions.swift in Sources */,
+				732BF7E41DEBAB6900F5842F /* UICopyableLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		73BC5E8C1DDC521C00E8AEC2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73BC5E8D1DDC521C00E8AEC2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		73BC5E911DDC521C00E8AEC2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73BC5E921DDC521C00E8AEC2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		73BC5E951DDC521C00E8AEC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		73BC5E961DDC521C00E8AEC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73BC5E981DDC521C00E8AEC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UQ37D35Z4Z;
+				INFOPLIST_FILE = JejuEVChargeStation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.ditapps.jejuevs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		73BC5E991DDC521C00E8AEC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UQ37D35Z4Z;
+				INFOPLIST_FILE = JejuEVChargeStation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.ditapps.jejuevs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73BC5E801DDC521C00E8AEC2 /* Build configuration list for PBXProject "JejuEVChargeStation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73BC5E951DDC521C00E8AEC2 /* Debug */,
+				73BC5E961DDC521C00E8AEC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73BC5E971DDC521C00E8AEC2 /* Build configuration list for PBXNativeTarget "JejuEVChargeStation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73BC5E981DDC521C00E8AEC2 /* Debug */,
+				73BC5E991DDC521C00E8AEC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73BC5E7D1DDC521C00E8AEC2 /* Project object */;
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="91i-Fk-xo5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gSW-Gi-Sh4">
+            <objects>
+                <viewController id="91i-Fk-xo5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cq4-VH-aFu"/>
+                        <viewControllerLayoutGuide type="bottom" id="HsL-uG-0HD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YHk-J8-MeG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-fp-Uyr">
+                                <rect key="frame" x="96" y="170" width="183" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SJk-rU-oNs">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Elc-EU-9Ah">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="200"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lya-NX-L0r">
+                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="200"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pills.png" translatesAutoresizingMaskIntoConstraints="NO" id="q7i-a1-P2W">
+                                                                <rect key="frame" x="0.0" y="0.0" width="183" height="200"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHe-le-XoB">
+                                <rect key="frame" x="16" y="435" width="343" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="OC9-kE-yZn"/>
+                                    <constraint firstAttribute="width" constant="343" id="QP0-5o-UV3"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="부산 약국 어디?">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="41" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12750136001088955" green="0.75821945646409561" blue="0.99907767772674561" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tgv-fp-Uyr" firstAttribute="top" secondItem="cq4-VH-aFu" secondAttribute="bottom" constant="150" id="RE6-xo-zd3"/>
+                            <constraint firstItem="Tgv-fp-Uyr" firstAttribute="leading" secondItem="YHk-J8-MeG" secondAttribute="leadingMargin" constant="80" id="SCH-zS-Md1"/>
+                            <constraint firstItem="DHe-le-XoB" firstAttribute="top" secondItem="Tgv-fp-Uyr" secondAttribute="bottom" constant="65" id="Wwb-nf-dIe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tgv-fp-Uyr" secondAttribute="trailing" constant="80" id="ZNN-BN-bjY"/>
+                            <constraint firstItem="Tgv-fp-Uyr" firstAttribute="centerX" secondItem="YHk-J8-MeG" secondAttribute="centerX" id="eCm-IH-A1b"/>
+                            <constraint firstItem="DHe-le-XoB" firstAttribute="leading" secondItem="YHk-J8-MeG" secondAttribute="leadingMargin" id="m8V-PQ-Ehb"/>
+                            <constraint firstItem="DHe-le-XoB" firstAttribute="trailing" secondItem="YHk-J8-MeG" secondAttribute="trailingMargin" id="yDR-y3-rCD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cg0-mg-SXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72.5" y="79.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pills.png" width="200" height="200"/>
+    </resources>
+</document>

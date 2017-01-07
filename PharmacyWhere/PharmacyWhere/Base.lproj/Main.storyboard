@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u49-ul-dXW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PharmacyWhere" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cxF-BS-KqZ">
+                                <rect key="frame" x="-4" y="44" width="383" height="573"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tiv-au-C2A">
+                                <rect key="frame" x="83" y="66" width="208" height="29"/>
+                                <segments>
+                                    <segment title="5Km"/>
+                                    <segment title="10Km"/>
+                                    <segment title="Total"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="FMY-Gn-vyp"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※  이동하실 약국을 선택하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raa-uA-5kr">
+                                <rect key="frame" x="9" y="627" width="350" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tiv-au-C2A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="4uy-ya-OsC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cxF-BS-KqZ" secondAttribute="trailing" constant="-20" id="5Fu-1h-Fen"/>
+                            <constraint firstItem="cxF-BS-KqZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5Kx-9O-BhJ"/>
+                            <constraint firstItem="cxF-BS-KqZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BPM-5N-HlJ"/>
+                            <constraint firstItem="tiv-au-C2A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GEe-cY-8Ah"/>
+                            <constraint firstItem="Raa-uA-5kr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="9" id="K26-i5-9Ui"/>
+                            <constraint firstItem="tiv-au-C2A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="NuV-qw-xj6"/>
+                            <constraint firstItem="Raa-uA-5kr" firstAttribute="top" secondItem="cxF-BS-KqZ" secondAttribute="bottom" constant="10" id="QUD-fm-3j5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Raa-uA-5kr" secondAttribute="bottom" constant="8" id="WiN-Y8-qay"/>
+                            <constraint firstAttribute="trailing" secondItem="Raa-uA-5kr" secondAttribute="trailing" constant="16" id="awF-tp-CVN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cxF-BS-KqZ" secondAttribute="bottom" constant="50" id="nvS-Fz-j4H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tiv-au-C2A" secondAttribute="trailing" constant="68" id="wgn-KZ-thh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z28-3x-bGv"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="lblRoute" destination="Raa-uA-5kr" id="eUV-Ir-Y3w"/>
+                        <outlet property="mapView" destination="cxF-BS-KqZ" id="Mcz-Yv-mp0"/>
+                        <outlet property="segControl" destination="tiv-au-C2A" id="4cJ-2x-59I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797.5999999999999" y="319.79010494752629"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qqo-jt-Sd6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u49-ul-dXW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KY7-lo-gYI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NVa-QM-UNq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIe-Cc-E5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="320"/>
+        </scene>
+    </scenes>
+</document>

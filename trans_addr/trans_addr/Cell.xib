@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1909" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="104" id="Vkn-bx-ct8" customClass="TableViewCell" customModule="trans_addr" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vkn-bx-ct8" id="Qnj-1e-Wxb">
+                <rect key="frame" x="0.0" y="0.0" width="485" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우편번호:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSg-5A-yOp">
+                        <rect key="frame" x="8" y="8" width="468" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Fdj-WB-NSM"/>
+                            <constraint firstAttribute="width" constant="468" id="Wb8-FD-Kzk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지번주소:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sv1-m0-8q3">
+                        <rect key="frame" x="8" y="35" width="468" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="468" id="W4H-H1-w8t"/>
+                            <constraint firstAttribute="height" constant="21" id="rq3-Yn-G5R"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도로명주소:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7j-99-HPw">
+                        <rect key="frame" x="8" y="64" width="468" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="468" id="4Jz-ow-tty"/>
+                            <constraint firstAttribute="height" constant="21" id="zVs-GG-l40"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oSg-5A-yOp" firstAttribute="leading" secondItem="Qnj-1e-Wxb" secondAttribute="leading" constant="8" id="23u-r0-Lrq"/>
+                    <constraint firstItem="M7j-99-HPw" firstAttribute="top" secondItem="sv1-m0-8q3" secondAttribute="bottom" constant="8" id="B7j-gP-hT4"/>
+                    <constraint firstItem="oSg-5A-yOp" firstAttribute="top" secondItem="Qnj-1e-Wxb" secondAttribute="top" constant="8" id="BYg-PW-hEp"/>
+                    <constraint firstItem="M7j-99-HPw" firstAttribute="leading" secondItem="Qnj-1e-Wxb" secondAttribute="leading" constant="8" id="Mvf-x0-KaE"/>
+                    <constraint firstItem="sv1-m0-8q3" firstAttribute="leading" secondItem="Qnj-1e-Wxb" secondAttribute="leading" constant="8" id="Tcc-TS-Sz5"/>
+                    <constraint firstItem="sv1-m0-8q3" firstAttribute="top" secondItem="oSg-5A-yOp" secondAttribute="bottom" constant="6" id="Ujt-6R-VQQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="LnmAdres" destination="sv1-m0-8q3" id="l1C-hh-MhI"/>
+                <outlet property="RnAdres" destination="M7j-99-HPw" id="cbI-vT-NlM"/>
+                <outlet property="ZipNo" destination="oSg-5A-yOp" id="4d6-bB-WOX"/>
+            </connections>
+            <point key="canvasLocation" x="312.5" y="185"/>
+        </tableViewCell>
+    </objects>
+</document>

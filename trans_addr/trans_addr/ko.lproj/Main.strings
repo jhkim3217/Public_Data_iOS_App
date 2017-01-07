@@ -1,0 +1,45 @@
+
+/* Class = "UINavigationItem"; title = "Please find an address"; ObjectID = "489-xj-QGd"; */
+"489-xj-QGd.title" = "주소를 찾아줘";
+
+/* Class = "UILabel"; text = "팀원"; ObjectID = "63s-cs-Arn"; */
+"63s-cs-Arn.text" = "팀원";
+
+/* Class = "UILabel"; text = "Update Info"; ObjectID = "9F8-1N-6aq"; */
+"9F8-1N-6aq.text" = "Update Info";
+
+/* Class = "UIButton"; normalTitle = "ROAD (도로명 주소)"; ObjectID = "9KU-QR-emT"; */
+"9KU-QR-emT.normalTitle" = "ROAD (도로명 주소)";
+
+/* Class = "UILabel"; text = "팀원"; ObjectID = "H0B-Sq-i8a"; */
+"H0B-Sq-i8a.text" = "팀원";
+
+/* Class = "UILabel"; text = "개발 팀장"; ObjectID = "JoI-kh-jwR"; */
+"JoI-kh-jwR.text" = "개발 팀장";
+
+/* Class = "UIButton"; normalTitle = "POST (우편 번호)"; ObjectID = "Jtu-am-eij"; */
+"Jtu-am-eij.normalTitle" = "POST (우편 번호)";
+
+/* Class = "UITabBarItem"; title = "Developers"; ObjectID = "MC8-S3-xLu"; */
+"MC8-S3-xLu.title" = "Developers";
+
+/* Class = "UILabel"; text = "Version : 0.0.1 ver"; ObjectID = "QVs-7G-grP"; */
+"QVs-7G-grP.text" = "Version : 0.0.1 ver";
+
+/* Class = "UILabel"; text = "서대경"; ObjectID = "VwH-Mm-3gU"; */
+"VwH-Mm-3gU.text" = "서대경";
+
+/* Class = "UILabel"; text = "임성진"; ObjectID = "czE-H9-JEr"; */
+"czE-H9-JEr.text" = "임성진";
+
+/* Class = "UIButton"; normalTitle = "DONG (지번 주소)"; ObjectID = "fsY-6V-WGe"; */
+"fsY-6V-WGe.normalTitle" = "DONG (지번 주소)";
+
+/* Class = "UIButton"; normalTitle = "시작하기"; ObjectID = "gwj-gB-YqD"; */
+"gwj-gB-YqD.normalTitle" = "시작하기";
+
+/* Class = "UINavigationItem"; title = "Developer's Infomation"; ObjectID = "loK-NW-W9n"; */
+"loK-NW-W9n.title" = "Developer's Infomation";
+
+/* Class = "UILabel"; text = "김영진"; ObjectID = "mxD-VD-AUf"; */
+"mxD-VD-AUf.text" = "김영진";

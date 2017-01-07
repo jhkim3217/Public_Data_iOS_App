@@ -1,0 +1,230 @@
+//
+//  ViewController.swift
+//  PharmacyWhere
+//
+//  Created by DIT on 2016. 11. 11..
+//  Copyright © 2016년 MinWook. All rights reserved.
+//
+
+import UIKit
+import MapKit
+import CoreLocation
+
+var item:[String:String] = [:]
+var items:[[String:String]] = []
+var elementCount = 0
+
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var segControl: UISegmentedControl!
+    @IBOutlet weak var remainingDistance: UILabel!
+    @IBOutlet weak var movingRoute: UILabel!
+    
+    var myRoute : MKRoute!
+    var myOverlay : MKOverlay!
+    var annotations = [ViewPoint]()
+    var location:CLLocationCoordinate2D? 
+    var locationManager = CLLocationManager()
+    
+    var telNum: : String?
+    var latDestination:Double?
+    var longDestination:Double?
+
+    let pharKey = "g%2BV76gKu50XVsTS5jt93A3dY1%2F95gN85mgXSVxGc7qScxvjjOAhUxc0PvjNEDL3fyZ2baDQicYrfowQqIpP8nw%3D%3D"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+	
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+
+        mapView.delegate = self
+        mapView.showsUserLocation = true
+        
+        let parseHandle = ParserHandle()
+        self.title = "부산 약국어디?"
+        
+        let strURL = "http://openapi.e-gen.or.kr/openapi/service/rest/ErmctInsttInfoInqireService/getParmacyListInfoInqire?serviceKey=\(pharKey)&Q0=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C&numOfRows=100&pageSize=999&pageNo=1&startPage=1"
+        
+        if let url = NSURL(string: strURL) {
+            if let parser = NSXMLParser(contentsOfURL: url) {
+                parser.delegate = parseHandle
+                
+                if parser.parse() {
+                    print("parsing succed")
+                    print(items)
+                    //print("totalCount = \(item["totalCount"])")
+                } else {
+                    print("parsing failed")
+                }
+            }
+        } else {
+            print("URL error")
+        }
+        
+        makeAnnotation()
+    }
+
+
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+	let userLocation: CLLocation = locations[0]
+        // print(userLocation)
+
+        location = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        let span:MKCoordinateSpan
+        
+        if(segControl.selectedSegmentIndex == 0) {
+            span = MKCoordinateSpanMake(0.05, 0.05)
+        } else if (segControl.selectedSegmentIndex == 1) {
+            span = MKCoordinateSpanMake(0.1, 0.1)
+        } else {
+            span = MKCoordinateSpanMake(0.35, 0.35)
+        }
+        
+        let region = MKCoordinateRegion(center: location!, span: span)
+        mapView.setRegion(region, animated: true)
+
+        // self.getDirection()
+    }
+    
+    
+    func makeAnnotation() {
+        for i in 0 ... elementCount-1 {
+            
+            let latitude = Double(items[i]["wgs84Lat"]!)
+            let longitude = Double(items[i]["wgs84Lon"]!)
+            let title = items[i]["dutyName"]!
+            let addr = items[i]["dutyAddr"]!
+            
+            let annotation = ViewPoint(title: title, coordinate: CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!), subtitle: addr)
+            annotations.append(annotation)
+        }
+        
+        mapView.addAnnotations(annotations)
+    }
+    
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let identifier = "myPin"
+        
+        // 사용자의 현재 위치 annotation을 제외함
+        if annotation.isKindOfClass(MKUserLocation) {
+            return nil
+        }
+        
+        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? MKPinAnnotationView
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .InfoLight)
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        return annotationView
+    }
+    
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    
+        let urlString = "tel://" + "\(tellNum!)"
+        let numberURL = NSURL(string: urlString)
+        // print(numberURL)
+        UIApplication.sharedApplication().openURL(numberURL!)
+    }
+    
+    
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        let viewAnno = view.annotation as! ViewPoint
+        let title = viewAnno.title
+
+        for item in items {
+            if(item["dutyName"] == title) {
+                latDestination = Double(item["wgs84Lat"]!)!
+                longDestination = Double(item["wgs84Lon"]!)!
+		telNum = String(item["dutyTel1"]!)!	
+	    }
+        }
+        
+        if(myOverlay != nil) {
+            mapView.removeOverlay(self.myOverlay)
+            self.myOverlay = nil
+        }
+
+        self.getDirection()
+    }
+
+
+    func getDirection() {
+        let directionsRequest = MKDirectionsRequest()
+        let current = MKPlacemark(coordinate: location!, addressDictionary: nil)
+        let destination = MKPlacemark(coordinate: CLLocationCoordinate2DMake(latDestination!, longDestination!), addressDictionary: nil)
+        
+        directionsRequest.source = MKMapItem(placemark: current)
+        directionsRequest.destination = MKMapItem(placemark: destination)
+        
+        directionsRequest.transportType = MKDirectionsTransportType.Automobile
+        let directions = MKDirections(request: directionsRequest)
+        
+        directions.calculateDirectionsWithCompletionHandler({
+            response, error in
+            
+            if error != nil {
+                print("Error getting directions")
+            } else {
+                self.showRoute(response!)
+            }
+        })
+    }
+
+
+    func showRoute(response: MKDirectionsResponse) {
+         self.myRoute = response.routes[0] as MKRoute
+
+	 if(myOverlay == nil) {
+	     self.myOverlay = self.myRoute.polyline
+	     self.mapView.addOverlay(self.myOverlay)
+	 }
+
+        let distance = myRoute.distance // meters
+        remainingDistance.text = "\(distance / 1000)km"
+    
+        movingRoute.text = "경로 : \(myRoute.steps[0].instructions)"
+    }
+    
+
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let myLineRenderer = MKPolylineRenderer(overlay: overlay)
+        myLineRenderer.strokeColor = UIColor.redColor()
+        myLineRenderer.lineWidth = 5
+        return myLineRenderer
+    }
+    
+    
+    @IBAction func segPressed(sender: AnyObject) {
+        let span:MKCoordinateSpan
+        
+        if(segControl.selectedSegmentIndex == 0) {
+            span = MKCoordinateSpanMake(0.05, 0.05)
+        } else if (segControl.selectedSegmentIndex == 1) {
+            span = MKCoordinateSpanMake(0.1, 0.1)
+        } else {
+            span = MKCoordinateSpanMake(0.35, 0.35)
+        }
+
+        let region = MKCoordinateRegion(center: location!, span: span)
+        mapView.setRegion(region, animated: true)
+    }
+  
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+}
