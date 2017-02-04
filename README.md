@@ -1,7 +1,8 @@
 ####동의과학대학교 모바일 엡센터에서 "부산 공공데이터 Open API를 이용한 iOS 앱개발" 프로젝트에 참여한 학생들이 개발한 공공 모바일 앱입니다. 개발환경은 iOS9/10,  Swift2/3 입니다. 공공데이터 활용 및 iOS 앱개발을 공부하는 분들에게 도움 되기 바라며, 시민들에게 지속적으로 사랑받는 부산 공공 모바일 앱이 많아 지기를 기원합니다.
 
-####동의과학대학교 컴퓨터정보과 김종현 교수/ jhkim@dit.ac.kr
+####동의과학대학교 컴퓨터정보과 김종현 교수/ jhkim@dit.ac.kr 
 
+####iOS App Store download link
 1. 자동심장충격기(AED) 찾기 https://itunes.apple.com/kr/app/jadongsimjangchung-gyeoggi/id1179659665?mt=8
 
 2. 부산 공영주차장 찾기 https://itunes.apple.com/kr/app/busan-gong-yeongjuchajang/id1179981910?mt=8
